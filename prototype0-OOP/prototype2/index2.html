@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌞 Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        var city = prompt();
+        var key ='1253309e30b4fb953c136c1426565be0&units=metric'
+        var url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`
+
+        fetch(url)
+        .then(function(response){
+            return response.json()
+            
+        })
+        .then(function(json){
+            var city = json.name
+            
+            var temprture = json.main.temp
+            var sky = json.weather[0].description
+
+
+            console.log(city)
+            
+            console.log(sky)
+            console.log(temprture)
+        })
+    </script>
+</body>
+</html>
