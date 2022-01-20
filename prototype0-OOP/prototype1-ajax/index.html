@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th>Prod_name</th>
+                    <th>Prod_price</th>
+                    <th>Prod_storage</th>
+                </tr>
+            </thead>
+            
+            <tbody id="data">
+    
+            </tbody>
+    
+        </table>
+    </div>
+    
+    <script>
+
+
+
+
+
+        fetch("./products.json")
+        .then(function(res){
+            return res.json()
+        })
+        .then(function(data){
+            console.log(data);
+            var row = "";
+            for (i=0 ;i<data.length;i++){
+               
+                        
+                            row +="<tr>"
+                            row +="<td>" +data[i].name+"</td>"
+                            row +="<td>" +data[i].price+"</td>"
+                            row +="<td>" +data[i].storage+"</td>"
+                            row +="</tr>"
+                            document.getElementById("data").innerHTML=row
+            }
+                      
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // fetch("./products.json")
+        // .then(res =>{
+        //     res.json()
+        //     .then(
+        //         data=>{
+        //             console.log(data);
+        //             if(data.length>0){
+        //                 var row = "";
+        //                for (i=0 ;i<data.length;i++){
+                           
+        //                }
+        //                 //ALIAS U
+        //                 data.forEach((u) => {
+        //                     row +="<tr>"
+        //                     row +="<td>" +u.name+"</td>"
+        //                     row +="<td>" +u.price+"</td>"
+        //                     row +="<td>" +u.price+"</td>"
+
+        //                 });
+        //                 //close for loop
+        //                 document.getElementById("data").innerHTML=row
+        //             }
+        //         }
+        //     )
+
+        // })
+
+
+        
+    </script>
+</body>
+</html>
