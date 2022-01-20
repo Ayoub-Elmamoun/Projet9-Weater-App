@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="costume.css">
+
+    
+    <title>My Weather</title>
+</head>
+
+<body>
+
+    <div class="container ">
+        <div class="d-flex justify-content-center ">
+            <div class="search"> <input id="cityInput" class="search_input" type="text" name="" placeholder="Search here..."> <a href="#"   class="search_icon"><i onclick="onSearch()" class="fa fa-search"></i></a> </div>
+        </div>
+    </div>
+    <!-- <div>
+        <input id="cityInput" type="text" placeholder="City Name">
+        <button onclick="onSearch()">Search</button>
+    </div> -->
+    <div class="current_weather">
+        <div>
+            
+            <!-- <p id="descri"></p> -->
+        </div>
+        
+           
+            <div class="container-fluid px-1 px-md-4 py-5 mx-auto">
+                <div class="row   justify-content-center px-3">
+                    <div class="  card">
+                        <div class="cityDate">
+                            <p id="date" class="ml-4 mb-4"></p>
+                            <h2  id="city" class="ml-auto mr-4 mt-3 mb-0"></h2>
+                           
+                        </div>
+                        
+                        <img src="http://openweathermap.org/img/w/" id="icon">
+
+                        <h2  id="city" class="ml-auto mr-4 mt-3 mb-0"></h2>
+                        <!-- <p id="icon"></p> -->
+                        <p id="desc" class="ml-auto mr-4 mb-0 med-font"></p>
+                        <div class="humidity">
+                            <img id="iconHumidity" src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-humidity-weather-dreamstale-lineal-dreamstale.png"/>
+                          
+                            <p id="country" class="time-font  mb-0 ml-4 mt-auto"><span class="sm-font"></span></p>
+                        </div>
+                        <h1 id="temp" class="ml-auto mr-4 large-font">&#176;</h1>
+                        
+                       
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</body>
+<script src="weather.js"></script>
+<script src="weatherManager.js"></script>
+<script src="main.js"></script>
+
+</html>
